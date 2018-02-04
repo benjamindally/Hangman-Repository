@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>A License to Hangman</title>
+
+	<title>A License to Kill</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet"> 
-	<<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<script type="text/javascript" src="./assets/javascript/javascript.js"></script>
+	
 </head>
 <body>
 	<div class="container-fluid">
@@ -14,11 +18,39 @@
 				<img class="img-fluid" src=./assets/images/bond_banner.jpg alt="James Bond Actors">
 			</div>	
 		</div> 	
+
 		<div class="row">
 			<div class="col-md-12">
-				<h1 class="text-center">A LICENSE TO HANGMAN</h1>
+				<h1 class="text-center">A LICENSE TO KILL</h1>
 			</div>	
 		</div> 	
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card text-center">
+						<p>Mission</p>
+						<p id="word_to_guess"></p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card text-center">
+						<p>Shots Taken</p>
+						<p id="letter_guessed"></p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card text-center">
+						<p>Kills</p>
+						<p id="correct_guessed"></p>
+						<p>Wounds</p>
+						<p id="incorrect_guessed"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	</div>
 </body>
 </html>
