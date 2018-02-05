@@ -16,7 +16,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="text-center">
-				<img class="img-fluid top_image" src=./assets/images/bond_banner.jpg alt="James Bond Actors">
+				<img class="img-fluid top_image" src="./assets/images/bond_banner.jpg" alt="James Bond Actors">
 				</div>
 			</div>	
 		</div> 	
@@ -27,32 +27,38 @@
 			</div>	
 		</div> 	
 	
-	<div class="row">
-		<div class="col-md-12">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="card text-center display_results">
-						<p>Mission</p>
-						<p id="word_to_guess"><br></p>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card text-center display_results">
+							<p>Mission</p>
+							<p id="word_to_guess"><br></p>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card text-center display_results">
-						<p>Shots Taken</p>
-						<p id="letter_guessed"><br></p>
+					<div class="col-md-4">
+						<div class="card text-center display_results">
+							<p>Shots Taken</p>
+							<p id="letter_guessed"><br></p>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card text-center display_results">
-						<p>Hits Remaining</p>
-						<p id="correct_guessed"><br></p>
-						<p>Wounds</p>
-						<p id="incorrect_guessed"><br></p>
+					<div class="col-md-4">
+						<div class="card text-center display_results">
+							<p>Hits Remaining</p>
+							<p id="correct_guessed"><br></p>
+							<p>Wounds</p>
+							<p id="incorrect_guessed"><br></p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+		<audio id="load_sound">
+			<source src="./assets/sounds/theme_music.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="winning_sound">
+			<source src="./assets/sounds/shaken_not_stirred.mp3" type="audio/mpeg">
+		</audio>
 	</div>
 </body>
 </html>
