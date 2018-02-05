@@ -5,3 +5,11 @@ html, body{
 h1 {
 	font-family: 'Quattrocento', serif;
 }
+
+.top_image{
+	height: 250px;
+}
+
+.display_results{
+	height: 200px;
+}
