@@ -1,8 +1,6 @@
 var possibleWords = ["Goldfinger"]
 //, "Jaws", "Dr. No", "Oddjob", "Spectre", "SMERSH", "Goldeneye"] //array with possible words that users will guess
 var displayWord;
-var numberOfGuess = 0;
-var numberCorrect = 0;
 
 
 //alert("Press any Key To Get Started")//not actually needed but it's in the homework instructions so here it is
@@ -10,7 +8,6 @@ var numberCorrect = 0;
 //this funciton will run after the page loads and output a random word from the above defined array and initiate the a funciton dependent on that random word
 window.onload = function randomizer(){
 	var displayWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];
-	console.log(displayWord);
 		if (displayWord === "Goldfinger"){
 			goldfingerGame();
 			return;
@@ -45,14 +42,15 @@ window.onload = function randomizer(){
 	
 		var userGuess = "";
 		var printWord = [];
+		var remainingLetter = displayWord.length;
+		var incorrectCounter = 0;
 
 			//loop through the displayed word in order to find the number of the correct blank spaces to be displayed
 		for (i = 0; i < displayWord.length; i++){
 		 	printWord[i] = "_";
 		}
 
-		var remainingLetter = displayWord.length;
-		console.log(remainingLetter);
+		
 
 		//display the blank spaces on the page
 		document.getElementById('word_to_guess').innerHTML = printWord.join(" ");
@@ -61,17 +59,21 @@ window.onload = function randomizer(){
 		document.onkeyup = function (event){
 			var userGuess1 = event.key; //finds userinput
 			var userGuess2 = /^[A-Za-z]$/;//creates array to test key against to make sure non-letters are not displayed
+			var userGuess3 = /[^/g/o/l/d/f/i/n/e/r/G/O/L/D/F/I/N/E/R]$/;//creates array to test key against to make sure non-letters are not displayed
 
 			//tests user input against regex array to make sure incorrect non-letters are not displayed
-			if (userGuess2.test(userGuess1)){
+			if (userGuess2.test(userGuess1) && userGuess3.test(userGuess1)){
 			document.getElementById('letter_guessed').innerHTML += " " + userGuess1; //displays keys pressed
-			console.log(userGuess1);
-			}else{
-				return;
+			incorrectCounter++;
 			}
 
-			document.getElementById('incorrect_guessed').innerHTML = numberOfGuess; //displays number of incorrect guesses			
+			document.getElementById('incorrect_guessed').innerHTML = incorrectCounter; //displays number of incorrect guesses			
 
+			if (incorrectCounter === 8){
+				alert("Report back to HQ, 007.")
+				location.reload();
+				return;
+			}
 
 			//places letters into correct spaces on screen
 			if (printWord[0] === "_" && userGuess1 === "g" || printWord[0] === "_" && userGuess1 === "G"){
@@ -113,9 +115,6 @@ window.onload = function randomizer(){
 				remainingLetter--;
 			}
 			
-			console.log(remainingLetter);
-
-
 		//create a variable for the div that will display the result
 		document.getElementById('word_to_guess').innerHTML = printWord.join(" ");
 
