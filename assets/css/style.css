@@ -3,13 +3,22 @@ html, body{
 	font-family: 'Quattrocento', serif;
 }
 
+.title{
+	margin: 30px;
+}
+
 .top_image{
 	height: 250px;
 }
 
+.instructions{
+	padding: 30px;
+	font-size: 125%;
+}
+
 .display_results{
-	height: 200px;
-	padding-top: 20px;
+	height: 240px;
+	margin-bottom: 50px;
 	font-size: 145%;
 }
 

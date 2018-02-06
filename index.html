@@ -14,6 +14,12 @@
 <body>
 	<div class="container-fluid">
 		<div class="row">
+			<div class="col-md-12 title">
+				<h1 class="text-center">A LICENSE TO HANGMAN</h1>
+			</div>	
+		</div>
+
+		<div class="row">
 			<div class="col-md-12">
 				<div class="text-center">
 				<img class="img-fluid top_image" src="./assets/images/bond_banner.jpg" alt="James Bond Actors">
@@ -21,32 +27,40 @@
 			</div>	
 		</div> 	
 
+ 	
 		<div class="row">
-			<div class="col-md-12">
-				<h1 class="text-center">A LICENSE TO KILL</h1>
-			</div>	
-		</div> 	
-	
+			<div class="col-md-12 instructions text-center">
+				<p>Mission Detail</p>
+				<p>Mi-6 needs you again, 007. Guess the correct Bond trivia word before it's too late. Only 8 guesses remaining. Good Luck</p>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="row">
 					<div class="col-md-4">
 						<div class="card text-center display_results">
+							<div class="card-header">
 							<p>Mission</p>
+							</div>
 							<p id="word_to_guess"><br></p>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="card text-center display_results">
+							<div class="card-header">
 							<p>Shots Taken</p>
+						</div>
 							<p id="letter_guessed"><br></p>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="card text-center display_results">
-							<p>Hits Remaining</p>
+							<div class="card-header">
+								<p>Mission Progress</p>
+							</div>
+							<p>Missing Letters</p>
 							<p id="correct_guessed"><br></p>
-							<p>Wounds</p>
+							<p>Bullets Remaining</p>
 							<p id="incorrect_guessed"><br></p>
 						</div>
 					</div>
